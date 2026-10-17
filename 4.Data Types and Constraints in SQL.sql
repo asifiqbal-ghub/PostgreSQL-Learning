@@ -1,7 +1,31 @@
 -- ==========================================
 -- LESSON 6: Data Types and Constraints
 -- ==========================================
+🎯 Objective
+---To understand how SQL Data Types define the type of data stored in a table and how Constraints enforce rules to ensure data accuracy, consistency, and integrity.
+📖 Explanation
+--In SQL, every column in a table must have a Data Type. The data type determines what kind of information can be stored in that column, such as numbers, text, dates, or decimal values.
+--Constraints are rules applied to columns that restrict the type of data that can be entered. They help maintain data quality and prevent invalid or duplicate data from being stored in the database.
+--Together, Data Types and Constraints ensure that the database stores accurate, reliable, and meaningful information.
 
+📝 Key Points
+SQL
+INT --> Stores whole numbers
+VARCHAR --> Stores text values
+CHAR --> Stores fixed-length text
+DATE --> Stores date values
+TIME --> Stores time values
+TIMESTAMP --> Stores date and time
+NUMERIC --> Stores decimal values
+BOOLEAN --> Stores TRUE/FALSE values
+ 
+PRIMARY KEY --> Unique identifier
+NOT NULL --> Value cannot be empty
+UNIQUE --> No duplicate values
+CHECK --> Validates a condition
+DEFAULT --> Assigns default value
+FOREIGN KEY --> Creates relationship between tables
+    
 -- Objective:
 -- Learn how to use Data Types and Constraints
 -- while creating a table in PostgreSQL.
