@@ -86,3 +86,38 @@ SELECT * FROM users ORDER BY user_id ASC;
 UPDATE users
 SET age = age +1
 WHERE username = 'Rajesh';
+
+-- Update the city to Chennai for all users
+-- whose age is greater than 30 years
+
+UPDATE users
+SET city = 'Chennai'
+WHERE age>30;
+
+-- Update the city to Chennai for all users
+-- whose age is greater than or equal to 30 years
+
+UPDATE users
+SET city = 'Chennai'
+WHERE age >= 30;
+
+-- Update Priya's age to 31 and city to Kolkata
+-- Multiple columns are updated in a single query
+-- WHERE clause ensures only Priya's record is modified
+
+UPDATE users
+SET age = 	31,
+	city = 'Kolkata'
+WHERE username = 'Priya';
+
+-- Increase the age by 1 year for all users
+-- whose email address contains 'gmail.com'
+UPDATE users
+SET age = age +1 
+WHERE email LIKE '%gmail.com'
+
+-- UPDATE users              : Specifies the table to update
+-- SET age = age + 1         : Increases the current age by 1
+-- WHERE email LIKE          : Filters records based on email pattern
+-- '%gmail.com'              : Selects emails ending with gmail.com
+
