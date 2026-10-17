@@ -47,3 +47,42 @@ SELECT * FROM users;
 SELECT *
 FROM users
 ORDER BY user_id;
+
+-- =====================================================
+-- Display specific columns from the users table
+-- username : Shows the user's name
+-- city     : Shows the user's city
+-- Selecting only required columns improves readability
+-- and returns less unnecessary data.
+-- =====================================================
+SELECT username, city FROM users;
+
+-- Update Rajesh's age from 25 to 26
+-- WHERE clause ensures only Rajesh's record is updated
+UPDATE users
+SET age = 26
+WHERE username = 'Rajesh';
+
+-- Verify the update
+SELECT * FROM users;
+
+-- Retrieve all records from the users table
+-- and display them in ascending order of user_id
+
+SELECT * FROM users ORDER BY user_id ASC;
+
+-- Change Priya's city from Delhi to Mumbai
+UPDATE users
+SET city = 'Mumbai'
+WHERE username = 'Priya'
+
+-- Verify the update
+SELECT * FROM users;
+
+-- and display them in ascending order of user_id
+SELECT * FROM users ORDER BY user_id ASC;
+
+-- Increase Rajesh's age by 1 year
+UPDATE users
+SET age = age +1
+WHERE username = 'Rajesh';
