@@ -56,3 +56,39 @@ Asif Iqbal
 Learning PostgreSQL step by step and building a strong SQL portfolio on GitHub.
 
 ⭐ If you're also learning SQL, feel free to explore this repository.
+
+✅ Lesson 05 - UPDATE Data in SQL
+
+🎯 Objective
+Learn how to modify existing records in a table using the UPDATE statement.
+
+SQL Example
+-- Update Rajesh's city from Mumbai to Kolkata
+
+UPDATE users
+SET city = 'Kolkata'
+WHERE user_id = 1;
+
+-- View all records after the update
+
+SELECT *
+FROM users
+ORDER BY user_id;
+Key Learning
+UPDATE modifies existing records in a table.
+SET specifies the new value for a column.
+WHERE identifies which row(s) should be updated.
+ORDER BY sorts the result in a specific order.
+Omitting the WHERE clause updates all rows in the table.
+Memory Statement
+-- UPDATE = Modify Existing Data
+-- SET = New Value
+-- WHERE = Specific Row Selection
+-- ORDER BY = Sort Results
+
+UPDATE + SET + WHERE = Safe Data Modification
+Summary
+The UPDATE statement is used
+
+
+
