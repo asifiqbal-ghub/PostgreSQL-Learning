@@ -1,0 +1,115 @@
+-- SQL Practice: Delete Rows and Columns from the Employee Table
+
+CREATE TABLE employee2(
+	employee_id INT PRIMARY KEY, 
+	name VARCHAR(100) NOT NULL,
+	position VARCHAR(50),
+	department VARCHAR(50),
+	hire_date DATE,
+	salary NUMERIC(10,2)
+);
+
+--- used INT instead of keeping SERIAL
+
+SELECT * FROM employee2;
+
+--- Employee Data Sample
+
+INSERT INTO employee2(employee_id, name, position, department, hire_date, salary)
+VALUES
+(101, 'Amit Sharma', 'Data Analyst', 'Data Science', '2022-05-15', 65000.00),
+(102, 'Priya Desai', 'Software Engineer', 'IT', '2021-09-20', 75000.00),
+(103, 'Rajesh Kumar', 'HR Manager', 'Human Resources', '2019-03-10', 82000.00),
+(104, 'Sneha Patel', 'Marketing Specialist', 'Marketing', '2020-11-25', 58000.00),
+(105, 'Vikram Singh', 'Sales Executive', 'Sales', '2023-02-12', 62000.00);
+
+-- Task: Delete a Specific Employee Record from the Employee Table
+
+DELETE FROM employee
+WHERE employee_id = 105;
+
+-- 1.Task: Delete a Specific Employee Record from the Employee Table
+
+DELETE FROM employee2
+WHERE employee_id = 105;
+
+/*
+Understanding:
+1. DELETE FROM employee
+   - Removes data from the employee table.
+
+2. WHERE employee_id = 105
+   - Deletes only the record with Employee ID 105 (Vikram Singh).
+
+3. Always use a WHERE clause
+   - Prevents accidental deletion of all records in the table.
+*/
+
+-- Deleting Employee ID 105
+
+DELETE FROM employee
+WHERE employee_id = 105;
+
+-- Explanation:
+-- DELETE FROM employee: Specifies the table from which data will be removed.
+-- WHERE employee_id = 105: Deletes only the matching employee record.
+-- Without a WHERE clause, all rows in the table would be deleted.
+
+---2.Task: Delete Multiple Specific Rows from the Employee Table
+-- Delete Employee IDs 104 and 105
+
+DELETE FROM employee2
+WHERE employee_id IN (104,105);
+
+-- Explanation:
+-- IN (104, 105) allows deleting multiple specific records at once.
+-- Only employees with IDs 104 and 105 will be removed.
+
+--- Reinsert Missing Rows
+
+INSERT INTO employee2
+(employee_id, name, position, department, hire_date, salary)
+VALUES
+(104, 'Sneha Patel', 'Marketing Specialist', 'Marketing', '2020-11-25', 58000.00),
+(105, 'Vikram Singh', 'Sales Executive', 'Sales', '2023-02-12', 62000.00);
+
+SELECT * FROM employee2;
+
+--- 3.Task: Delete All Rows from the Employee Table
+
+DELETE FROM employee2
+
+-- Explanation:
+-- DELETE FROM employee2 removes all rows from the table.
+-- The table structure and columns remain intact.
+
+---4.Task: Delete (Drop) the Entire Table
+-- Delete the employee2 table permanently
+
+DROP TABLE employee2;
+
+-- Explanation:
+-- DROP TABLE employee2 removes the entire table.
+-- All data, columns, constraints, and table structure will be deleted.
+-- Use this command carefully because it cannot be undone.
+
+Quick Learning Note
+
+-- DELETE FROM employee2;
+-- Deletes rows only.
+
+-- DROP TABLE employee2;
+-- Deletes the entire table.
+
+-- SELECT * FROM employee2;
+-- Shows all data.
+
+-- CREATE TABLE employee2 (...);
+-- Creates the table again.
+
+Easy Formula to Remember
+--DELETE = Removes Rows
+--DROP COLUMN = Removes Columns
+--DROP TABLE = Removes Entire Table
+--ALTER TABLE = Changes Table Structure
+--WHERE = Selects Specific Rows
