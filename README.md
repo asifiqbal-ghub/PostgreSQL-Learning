@@ -90,3 +90,48 @@ UPDATE + SET + WHERE = Safe Data Modification
 Summary
 The UPDATE statement is used
 
+✅ Lesson 08 - Update Data in SQL with Toolbar
+🎯 Objective
+
+Learn how to update, edit, save, and manage records directly from the pgAdmin Data Output Toolbar without writing UPDATE statements.
+
+Toolbar Activities
+✏️ Edit Data
+-- Modify existing values directly in the Data Output grid.
+
+💾 Save Data Changes
+-- Save all modifications permanently to the database.
+
+➕ Add New Row
+-- Insert a new record using the toolbar.
+
+📄 Copy Row
+-- Copy selected row data.
+
+📋 Paste Row
+-- Paste copied data into a new row.
+
+🗑️ Delete Row
+-- Remove selected records from the table.
+
+⬇️ Download Data
+-- Export table data into CSV format.
+
+📈 Data Visualization
+-- View query results in graphical format.
+
+SQL Button
+-- Display the SQL query associated with the current data.
+
+Example Activity
+-- Update Rajesh's age from 28 to 29 using the toolbar.
+
+Equivalent SQL:
+
+UPDATE users
+SET age = 29
+WHERE user_id = 1;
+
+
+
+
