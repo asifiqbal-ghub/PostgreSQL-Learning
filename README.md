@@ -1,4 +1,4 @@
-<img width="1411" height="2268" alt="image" src="https://github.com/user-attachments/assets/3987de11-fab1-4eeb-aed6-4e5671ede84f" /># 🚀 PostgreSQL Learning Journey
+🚀 PostgreSQL Learning Journey
 Welcome to my PostgreSQL learning repository. This repository contains hands-on SQL practice, queries, and concepts that I am learning step by step using PostgreSQL and pgAdmin.
 
 📚 Lessons Completed
